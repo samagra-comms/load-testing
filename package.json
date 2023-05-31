@@ -1,0 +1,11 @@
+{
+  "name": "uci-load-testing",
+  "version": "1.0.0",
+  "repository": "git@github.com:samagra-comms/load-testing.git",
+  "devDependencies": {
+    "artillery": "^2.0.0-32"
+  },
+  "dependencies": {
+    "dotenv": "^16.1.1"
+  }
+}

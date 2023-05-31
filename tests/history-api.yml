@@ -1,0 +1,28 @@
+config:
+  target: ${HISTORY_API_URL}
+  phases:
+    - duration: 10
+      arrivalCount: 100
+      name: first
+    - duration: 20
+      arrivalCount: 900
+      name: second
+    - duration: 30
+      arrivalCount: 9000
+      name: third
+    - duration: 60
+      arrivalCount: 20000
+      name: fourth
+    - duration: 90
+      arrivalCount: 40000
+      name: fifth
+    - duration: 180
+      arrivalCount: 50000
+      name: sixth
+    - duration: 210
+      arrivalCount: 80000
+      name: seventh
+scenarios:
+  - flow:
+    - get:
+        url: ${HISTORY_URL}

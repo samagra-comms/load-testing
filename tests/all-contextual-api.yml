@@ -1,0 +1,40 @@
+config:
+  target: ${ALL_CONTEXTUAL_API_URL}
+  phases:
+    - duration: 10
+      arrivalCount: 100
+      name: first
+    - duration: 20
+      arrivalCount: 900
+      name: second
+    - duration: 30
+      arrivalCount: 9000
+      name: third
+    - duration: 60
+      arrivalCount: 20000
+      name: fourth
+    - duration: 90
+      arrivalCount: 40000
+      name: fifth
+    - duration: 180
+      arrivalCount: 50000
+      name: sixth
+    - duration: 210
+      arrivalCount: 80000
+      name: seventh
+scenarios:
+  - flow:
+    - get:
+        url: "/admin/bot/allContextual"
+        headers:
+          Accept: "application/json, text/plain, /"
+          Accept-Language: "en-US,en;q=0.9"
+          Connection: "keep-alive"
+          Content-Type: "application/json"
+          Origin: "http://localhost:3009/"
+          Referer: "http://localhost:3009/"
+          User-Agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
+          admin-token: ${ALL_CONTEXTUAL_ADMIN_TOKEN}
+          asset: "conversationLogic"
+          ownerID: "8f7ee860-0163-4229-9d2a-01cef53145ba"
+          ownerOrgID: "org01"
